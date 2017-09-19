@@ -189,6 +189,7 @@ nav{
 	position: absolute;
 	top: 0;
 	left: 0;
+	transition: all 0.5s;
 }
 .banner-img img{
 	display: block;
@@ -241,6 +242,7 @@ nav{
 	color: #A6A7A8;
 	line-height: 69px;
 /*     background: black; */
+	z-index:6; 
 }
 .banner .img-left:hover{
 	width: 41px;
@@ -259,6 +261,7 @@ nav{
 	top: 210px;
 	right: 0px;
 	line-height: 69px;
+	z-index: 6;
 
 /* 	background: black; */
 }
@@ -269,17 +272,23 @@ nav{
 	position: absolute;
 	bottom: 25px;
 	right: 35px;
+	z-index: 6;
 }
-.btn-banner li a{
+.btn-banner li{
 	width: 5px;
 	height: 5px;
-	background:rgba(0,0,0,0.4);;
+	background:rgba(0,0,0,0.4);
 	border: 2px solid rgba(255,255,255,0.5);
 	border-radius: 50%;
 	float: left;
 	margin-right: 10px;
 }
-.btn-banner li a:hover{
+.btn-banner li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.btn-banner li:hover{
 	background:rgba(159,162,166,0.5);
 	border: 2px solid rgba(255,255,255,0.8);
 }
@@ -297,10 +306,13 @@ aside{
 	top: 0;
 	left: 1px;
 	padding:18px 0 20px;
+	z-index: 6;
 }
 .banner-left{
 	width: 100%;
 	height: 100%;
+	/* position: relative; */
+	/* z-index: 6; */
 
 }
 .banner-left li{
@@ -322,7 +334,17 @@ aside{
 .banner-left .more{
 	float: right;
 	margin-right: 24px;
-}  
+} 
+.banner-left li>.item{
+	width: 800px;
+	height: 100%;
+	background: #fff;
+	position: absolute;
+	left: 234px;
+	top: 0;
+	display: none;
+	z-index: 20;	
+} 
 /* banner结束 */
 /* 1开始 */
 .center{
