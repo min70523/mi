@@ -77,11 +77,17 @@ main{
 }
 /* header结束 */
 /* nav开始 */
+.nav{
+	width: 100%;
+	height: 100px;
+	position:relative;
+}
 nav{
 	width: 1226px;
 	height: 100px;
 	background: #fff;
 	margin: 0 auto;
+
 }
 .logo{
 	width: 55px;
@@ -109,6 +115,61 @@ nav{
 .nav-center li a:hover{
 	color: #ff6700;
 }
+/**/
+nav .item1{
+	width: 100%;
+	height: 229px;
+	background: #fff;
+	position: absolute;
+	top: 100px;
+	left: 0;
+	display: none;
+	box-sizing: border-box;
+	border-top: 1px solid #e0e0e0;
+	z-index: 800;
+	padding-left: 143px;
+	padding-right: 40px;
+}
+nav .item1 li{
+	width: 203px;
+	height: 229px;
+	background: #fff;
+}
+.nav .item1 li .top{
+	width: 76px;
+	height: 20px;
+	border: 1px solid #ff6700;
+	margin: 0 auto;
+	font-size: 12px;
+	color: #ff6700;
+	text-align: center;
+	line-height: 20px;
+}
+nav .item1 li .top1{
+	opacity: 0;
+}
+.nav .item1 li .tu{
+	width: 150px;
+	height: 120px;
+	margin: 10px auto;
+}
+/**/
+nav .item1 li .s1{
+	font-size: 12px;
+	color: #000;
+	line-height: 20px;
+	display: block;
+	text-align: center;
+}
+nav .item1 li .s2{
+	font-size: 12px;
+	color: #ff6700;
+	line-height: 20px;
+	display: block;
+    text-align: center;
+}
+
+
 .nav-right{
 	width: 294px;
 	height: 48px;
@@ -327,7 +388,7 @@ aside{
 	height: 43px;
 	float: left;
 }
-.banner-left li a{
+.banner-left>li>a{
 	display: block;
 	width: 213px;
 	height: 43px;
@@ -335,7 +396,7 @@ aside{
     color: #fff;
     padding-left: 20px;
 }
-.banner-left li a:hover{
+.banner-left>li>a:hover{
 	background: #FF6700;
 }
 .banner-left .more{
@@ -343,7 +404,7 @@ aside{
 	margin-right: 24px;
 } 
 .banner-left li>.item{
-	width: 800px;
+	width: 802px;
 	height: 100%;
 	background: #fff;
 	position: absolute;
@@ -351,7 +412,81 @@ aside{
 	top: 0;
 	display: none;
 	z-index: 20;	
-} 
+}
+/**/
+.banner-left li .item li{
+	width: 265px;
+	height: 76px;
+	float: left;
+}
+.banner-left li .item li .link img{
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin-left: 40px;
+
+}
+.banner-left li .item li .link{
+	float: left;
+	margin-top: 25px;
+}
+.banner-left li .item li .link:hover span{
+	color: #ff6700;
+}
+.banner-left li .item li .link span{
+	float: left;
+	font-size: 12px;
+	margin-left: 10px;
+	color: #000;
+}
+.banner-left li .item li .btn{
+	float: right;
+	margin-right: 10px;
+	width: 59px;
+	height: 22px;
+	border: 1px solid #ff6700;
+	text-align: center;
+	line-height: 22px;
+	margin-top: 26px;
+	font-size: 12px;
+	color: #ff6700;
+}
+.banner-left li .item li .btn:hover{
+	background: #ff6700;
+	color: #fff;
+}
+.banner-left li .item2{
+	width: 951px;
+	height: 460px;
+	background: #fff;
+	position: absolute;
+	left: 234px;
+	top: -20px;
+	display: none;
+	z-index: 200;
+	border: 1px solid #e0e0e0;
+}
+.banner-left li .item2 .li2{
+	width: 317px;
+	height: 60px;
+	float: left;
+	padding-top: 20px;
+}
+.banner-left li .item2 .li2 img{
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin-left: 20px;
+	margin-right: 10px;
+}
+.banner-left li .item2 .li2 span{
+	font-size: 12px;
+	color: #000;
+}
+.banner-left li .item2>li:hover span{
+	color: #ff6700;
+}
+/**/
 /* banner结束 */
 /* 1开始 */
 .center{
@@ -482,6 +617,8 @@ h2{
 	border: 1px solid #e0e0e0;
 	float: right;
 	margin-top: 26px;
+	text-align: center;
+	line-height: 20px;
 }
 .btn-right{
 	width: 34px;
@@ -490,6 +627,7 @@ h2{
 	border-right: 0;
 	float: right;
 	margin-top: 26px;
+	text-align: center;
 }
 .star-bottom{
 	width: 1226px;
@@ -499,9 +637,8 @@ h2{
 }
 .star-bottom ul{
     width: 2470px;
-	height: 340px;
-	
-	/* margin: 0 auto; */
+	height: 340px;	
+	margin: 0 auto;
 
 }
 .star-box li{
@@ -512,6 +649,7 @@ h2{
 	margin-right: 14px;
 	padding-top: 39px;
 }
+
 .star-box .aimg{
 	display: block;
 	width: 160px;
@@ -814,27 +952,30 @@ h2{
 	float: left;
 	font-size: 22px;
 }
-.btn-left{
+.recommend .btn-left{
 	width: 34px;
 	height: 22px;
 	border: 1px solid #e0e0e0;
 	float: right;
 	margin-top: 26px;
+	color: #808080;
 }
-.btn-right{
+.recommend .btn-right{
 	width: 34px;
 	height: 22px;
 	border: 1px solid #e0e0e0;
 	border-right: 0;
 	float: right;
 	margin-top: 26px;
+	color: #e0e0e0;
 }
 .recommend-bottom{
 	width: 1226px;
 	height: 320px;
+	overflow: hidden;
 }
 .recommend-bottom ul{
-    width: 1226px;
+    width: 2470px;
 	height: 320px;
 }
 .recommend-box li{
@@ -900,7 +1041,7 @@ h2{
 	float: left;
 	font-size: 22px;
 }
-.btn-left{
+/* .btn-left{
 	width: 34px;
 	height: 22px;
 	border: 1px solid #e0e0e0;
@@ -925,7 +1066,7 @@ h2{
 	border-right: 0;
 	float: right;
 	margin-top: 26px;
-}
+} */
 .hot-bottom{
 	width: 1226px;
 	height: 320px;
